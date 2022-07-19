@@ -3,18 +3,24 @@ import classNames from "classnames";
 export function BorderBox({
   state = "out",
   children,
+  className,
 }: {
   state?: "in" | "out";
   children: React.ReactNode;
+  className?: string;
 }) {
   return (
     <div
-      className={classNames("border", {
-        "border-l-gray-50 border-t-gray-50 border-r-gray-900 border-b-gray-900":
-          state === "out",
-        "border-l-gray-900 border-t-gray-900 border-r-gray-50 border-b-gray-50":
-          state === "in",
-      })}
+      className={classNames(
+        "border",
+        {
+          "border-l-gray-50 border-t-gray-50 border-r-gray-900 border-b-gray-900":
+            state === "out",
+          "border-l-gray-900 border-t-gray-900 border-r-gray-50 border-b-gray-50":
+            state === "in",
+        },
+        className
+      )}
     >
       <div
         className={classNames("border", {

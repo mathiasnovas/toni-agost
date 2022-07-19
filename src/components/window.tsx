@@ -25,7 +25,7 @@ export function Window({
 
         <div className="p-1">
           <BorderBox state="in">
-            <div className="overflow-scroll w-full max-w-[700px] max-h-[calc(100vh_-_150px)] md:max-h-[50vh] p-3 bg-white">
+            <div className="overflow-y-scroll w-full max-w-[700px] h-[65vh] lg:h-[40vh] p-3 bg-white">
               {children}
             </div>
           </BorderBox>

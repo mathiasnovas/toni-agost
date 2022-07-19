@@ -45,7 +45,7 @@ export const TaskBar = () => {
   }
 
   return (
-    <div ref={menuTriggerRef} className="absolute bottom-0 left-0 w-full">
+    <div ref={menuTriggerRef}>
       {menuOpen ? (
         <div className="lg:hidden flex absolute bottom-full flex-col max-w-full w-[320px]">
           <LinkList

@@ -13,11 +13,11 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-col justify-center items-center h-screen">
+      <div className="flex flex-col justify-center items-center h-screen">
         <div className="-translate-y-8 px-5">
           <Image src={Logo.src} width={397} height={100} alt="toniagost logo" />
         </div>
-      </main>
+      </div>
     </>
   );
 };
