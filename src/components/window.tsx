@@ -14,18 +14,27 @@ export function Window({
   children: React.ReactNode;
 }) {
   const windowOffset = 150;
-  const [windowHeight, setWindowHeight] = useState<number>();
-  const maxHeightClass = classNames(`max-h-\[${windowHeight}px\]`);
-
   const windowRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (window != undefined) {
-      windowRef.current!.style.maxHeight = `${
-        window.innerHeight - windowOffset
-      }px`;
+    function handleResize() {
+      if (window != undefined) {
+        const newHeight =
+          window.innerWidth < 768
+            ? `${window.innerHeight - windowOffset}px`
+            : `40vh`;
+
+        windowRef.current!.style.maxHeight = newHeight;
+      }
     }
-  }, [windowRef, windowHeight]);
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [windowRef]);
 
   return (
     <BorderBox>
@@ -44,7 +53,7 @@ export function Window({
             <div
               ref={windowRef}
               className={classNames(
-                "overflow-y-scroll w-full max-w-[700px] p-3 bg-white"
+                "overflow-y-scroll w-full max-w-[700px] max-h-[40vh] p-3 bg-white"
               )}
             >
               {children}
