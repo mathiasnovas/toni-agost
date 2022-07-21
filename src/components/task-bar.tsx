@@ -28,8 +28,8 @@ export const TaskBar = () => {
       icon: Heart.src,
     },
     {
-      label: "Pictures",
-      route: "/pictures",
+      label: "Contact",
+      route: "/contact",
       icon: Spiral.src,
     },
     {

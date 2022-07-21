@@ -19,6 +19,9 @@ module.exports = {
           400: "#07F0FF",
         },
       },
+      backgroundImage: {
+        "desktop-picture": "url('/images/bg2.png')",
+      },
     },
   },
   plugins: [],

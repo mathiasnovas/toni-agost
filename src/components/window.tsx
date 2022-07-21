@@ -1,3 +1,5 @@
+import classNames from "classnames";
+import { useEffect, useRef, useState } from "react";
 import { BorderBox } from "./border-box";
 
 export function Window({
@@ -11,6 +13,20 @@ export function Window({
   actions?: React.ReactNode;
   children: React.ReactNode;
 }) {
+  const windowOffset = 150;
+  const [windowHeight, setWindowHeight] = useState<number>();
+  const maxHeightClass = classNames(`max-h-\[${windowHeight}px\]`);
+
+  const windowRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (window != undefined) {
+      windowRef.current!.style.maxHeight = `${
+        window.innerHeight - windowOffset
+      }px`;
+    }
+  }, [windowRef, windowHeight]);
+
   return (
     <BorderBox>
       <div className="bg-primary-300">
@@ -25,7 +41,12 @@ export function Window({
 
         <div className="p-1">
           <BorderBox state="in">
-            <div className="overflow-y-scroll w-full max-w-[700px] h-[65vh] lg:h-[40vh] p-3 bg-white">
+            <div
+              ref={windowRef}
+              className={classNames(
+                "overflow-y-scroll w-full max-w-[700px] p-3 bg-white"
+              )}
+            >
               {children}
             </div>
           </BorderBox>

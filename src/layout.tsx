@@ -1,13 +1,17 @@
-import { disableBodyScroll } from "body-scroll-lock";
+import Image from "next/image";
 
 import { TaskBar } from "./components/task-bar";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex flex-col h-screen max-h-screen bg-secondary">
-      <main className="flex-grow">{children}</main>
+    <div className="flex flex-col h-screen max-h-screen bg-primary-300">
+      <div className="overflow-hidden absolute z-0 h-full w-full"></div>
 
-      <footer className="fixed bottom-0 left-0 w-full mt-auto">
+      <main className="flex-grow z-10 bg-desktop-picture bg-no-repeat bg-center bg-cover">
+        {children}
+      </main>
+
+      <footer className="fixed bottom-0 left-0 w-full mt-auto z-20">
         <TaskBar />
       </footer>
     </div>
