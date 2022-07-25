@@ -46,7 +46,10 @@ function Gif({
 const Home: NextPage = () => {
   return (
     <>
-      <SEO title="Home" />
+      <SEO
+        title="Home"
+        description="Welcome to Toni's desktop. Here you can make a tattoo booking or chill with a game of minesweeper. Enjoy!"
+      />
 
       <div className="flex flex-col justify-center items-center h-screen">
         <div className="absolute left-0 top-0 w-full h-full">
