@@ -25,7 +25,12 @@ const MinesweeperPage: NextPage = () => {
     setGameState("lost");
   }
 
-  function resetGame() {}
+  function resetGame() {
+    setTestKey(testKey + 1);
+    setGameState("in-progress");
+  }
+
+  const [testKey, setTestKey] = useState<number>(1);
 
   return (
     <>
@@ -47,7 +52,11 @@ const MinesweeperPage: NextPage = () => {
           }
         >
           <div className="relative">
-            <Minesweeper onWin={handleOnWin} onLose={handleOnLose} />
+            <Minesweeper
+              key={testKey}
+              onWin={handleOnWin}
+              onLose={handleOnLose}
+            />
 
             {gameState === "lost" ? (
               <div className="absolute top-0 left-0 w-full h-full grid place-items-center bg-black bg-opacity-30">
