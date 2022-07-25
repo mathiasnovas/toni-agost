@@ -1,10 +1,9 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 
 import { Window } from "../components/window";
 import { Button } from "../components/button";
+import { SEO } from "../components/seo";
 
 import Heart from "../../public/images/heart.gif";
 import { useState } from "react";
@@ -32,11 +31,7 @@ const Booking: NextPage = () => {
 
   return (
     <>
-      <Head>
-        <title>Booking</title>
-        <meta name="description" content="Make your booking" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <SEO title="Booking" description="Book a tattoo apointment today" />
 
       <div className="flex flex-col items-center md:mt-[5vh] lg:mt-[15vh] p-2">
         <Window

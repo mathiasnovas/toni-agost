@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { NextPage } from "next";
-import Head from "next/head";
 import Image from "next/image";
 
 import "react-minesweeper/lib/minesweeper.css";
@@ -9,6 +8,7 @@ import { Window } from "../components/window";
 import { Minesweeper } from "../components/minesweeper";
 import { Button } from "../components/button";
 import { BorderBox } from "../components/border-box";
+import { SEO } from "../components/seo";
 
 import MinesweeperIcon from "../../public/images/minesweeper.gif";
 
@@ -29,11 +29,10 @@ const MinesweeperPage: NextPage = () => {
 
   return (
     <>
-      <Head>
-        <title>Minesweeper</title>
-        <meta name="description" content="Fancy a game of Minesweeper" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <SEO
+        title="Minesweeper"
+        description="Try your luck! Maybe you will be rewarded..."
+      />
 
       <div className="flex flex-col items-center md:mt-[5vh] lg:mt-[15vh] p-2">
         <Window

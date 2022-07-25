@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 import Image from "next/image";
 
 import { Window } from "../components/window";
+import { SEO } from "../components/seo";
 
 import Spiral from "../../public/images/spiral.gif";
 import Email from "../../public/images/twirlemail.gif";
@@ -10,11 +10,7 @@ import Email from "../../public/images/twirlemail.gif";
 const Contact: NextPage = () => {
   return (
     <>
-      <Head>
-        <title>Booking</title>
-        <meta name="description" content="Making your booking" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <SEO title="Contact me" />
 
       <div className="flex flex-col items-center md:mt-[5vh] lg:mt-[15vh] p-2">
         <Window
