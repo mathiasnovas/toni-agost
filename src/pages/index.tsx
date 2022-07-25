@@ -10,7 +10,6 @@ import Playboy from "../../public/images/playboy.gif";
 import Cowgirl from "../../public/images/cowgirl.gif";
 import Butteryfly from "../../public/images/butterfly.gif";
 import Dollar from "../../public/images/shop.gif";
-import Angel from "../../public/images/angel.gif";
 
 function Gif({
   image,
@@ -57,7 +56,7 @@ const Home: NextPage = () => {
         <div className="absolute left-0 top-0 w-full h-full">
           <div className="grid place-items-center h-full">
             <div className="hidden lg:block w-[1024px] bg-opacity-40">
-              <div className="grid grid-rows-3 grid-cols-5">
+              <div className="hidden grid-rows-3 grid-cols-5">
                 <div className="row-start-3 col-start-2 relative -translate-x-1/3 translate-y-1/4 rotate-12">
                   <Gif
                     image={

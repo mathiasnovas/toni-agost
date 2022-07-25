@@ -31,7 +31,7 @@ const Contact: NextPage = () => {
         >
           <div>
             <p>
-              This is a short text about how to contact me and what to expect
+              @to-do: A short text about how to contact me and what to expect
               when doing so.
             </p>
 

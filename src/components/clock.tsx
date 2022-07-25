@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import Image from "next/image";
+
+import Sun from "../../public/images/sun_ani.gif";
 
 export const Clock = () => {
   const [timeString, setTimeString] = useState<string>();
@@ -19,8 +22,16 @@ export const Clock = () => {
   }, []);
 
   return (
-    <div className="px-2 py-1 h-ful bg-primary-500 border border-b-gray-50 border-r-gray-50 border-t-gray-400 border-l-gray-400">
-      {"[icon]"} {timeString}
+    <div className="flex px-2 py-1 h-ful bg-primary-500 border border-b-gray-50 border-r-gray-50 border-t-gray-400 border-l-gray-400">
+      <figure className="relative w-6 h-6 mr-2">
+        <Image
+          src={Sun.src}
+          layout="fill"
+          objectFit="contain"
+          alt="Booking icon"
+        />{" "}
+      </figure>
+      {timeString}
     </div>
   );
 };

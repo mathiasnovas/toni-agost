@@ -158,15 +158,15 @@ const Booking: NextPage = () => {
               {currentBookingType === "booking-berlin" ? (
                 <div className="mt-4">
                   <p>
-                    This is a somewhat condensed text with information regarding
-                    Berlin bookings. For more information, please check the{" "}
+                    Book an appointment now or contact me if you have any
+                    questions regarding the process. You can also check out the{" "}
                     <button
                       className="text-primary underline cursor-pointer"
                       onClick={() => setCurrentTab("info")}
                     >
                       info section
-                    </button>
-                    .
+                    </button>{" "}
+                    for more information.
                   </p>
 
                   <div className="flex flex-col sm:flex-row items-center sm:gap-2 mt-4">
@@ -202,7 +202,7 @@ const Booking: NextPage = () => {
               {currentBookingType === "booking-guest-spot" ? (
                 <div className="mt-4">
                   <p>
-                    This is a somewhat condensed text with information regarding
+                    @to-do: A somewhat condensed text with information regarding
                     booking a guest spot. For more information, please check the{" "}
                     <button
                       className="text-primary underline cursor-pointer"
@@ -212,6 +212,22 @@ const Booking: NextPage = () => {
                     </button>
                     .
                   </p>
+
+                  <div className="flex flex-col sm:flex-row items-center sm:gap-2 mt-4">
+                    <Button
+                      href="https://form.jotform.com/toniagostph/guest-spot-request"
+                      target="_blank"
+                      variant="primary"
+                    >
+                      Book guest spot now
+                    </Button>
+
+                    <span className="text-sm">- or -</span>
+
+                    <Button href="/contact" variant="secondary">
+                      Contact me
+                    </Button>
+                  </div>
                 </div>
               ) : null}
             </div>

@@ -9,7 +9,7 @@ export function Window({
   children,
 }: {
   title: string;
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
   actions?: React.ReactNode;
   children: React.ReactNode;
 }) {
@@ -40,7 +40,7 @@ export function Window({
     <BorderBox>
       <div className="bg-primary-300">
         <div className="flex items-center py-1 px-2 bg-primary-500 select-none">
-          <div className="relative w-4 h-4 mr-2">{icon}</div>
+          {icon ? <div className="relative w-4 h-4 mr-2">{icon}</div> : null}
           <div>{title}</div>
         </div>
 
@@ -53,7 +53,7 @@ export function Window({
             <div
               ref={windowRef}
               className={classNames(
-                "overflow-y-scroll w-full max-w-[700px] max-h-[40vh] p-3 bg-white"
+                "overflow-y-scroll w-full max-w-[700px] max-h-[50vh] p-3 bg-white"
               )}
             >
               {children}

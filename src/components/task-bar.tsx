@@ -14,6 +14,7 @@ import Heart from "../../public/images/heart.gif";
 import Spiral from "../../public/images/spiral.gif";
 import Shop from "../../public/images/shop.gif";
 import Star from "../../public/images/star.gif";
+import Minesweeper from "../../public/images/minesweeper.gif";
 
 export const TaskBar = () => {
   const router = useRouter();
@@ -36,6 +37,11 @@ export const TaskBar = () => {
       label: "Shop",
       route: "/shop",
       icon: Shop.src,
+    },
+    {
+      label: "Minesweeper",
+      route: "/minesweeper",
+      icon: Minesweeper.src,
     },
   ] as LinkListItem[];
 
