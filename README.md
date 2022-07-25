@@ -1,3 +1,5 @@
-# Create T3 App
+# Toniagost - Website
 
-This is an app bootstrapped according to the [init.tips](https://init.tips) stack, also known as the T3-Stack.
+## Early 2000s desktop style.
+
+Make tattoo appointments or chill out with a game of minesweeper.
