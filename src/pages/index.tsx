@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { SEO } from "../components/seo";
+import { BorderBox } from "../components/border-box";
 
 import Logo from "../../public/images/logo.gif";
 import TattooGun from "../../public/images/tatgun.gif";
@@ -10,19 +11,26 @@ import Playboy from "../../public/images/playboy.gif";
 import Cowgirl from "../../public/images/cowgirl.gif";
 import Butteryfly from "../../public/images/butterfly.gif";
 import Dollar from "../../public/images/shop.gif";
+import classNames from "classnames";
 
 function Gif({
   image,
-  size = 200,
+  size = "medium",
   link,
 }: {
   image: React.ReactNode;
-  size?: number;
+  size?: "medium" | "small" | "smaller";
   link?: { label: string; route: string };
 }) {
   if (!link) {
     return (
-      <figure className={`relative w-[${size}px] h-[${size}px]`}>
+      <figure
+        className={classNames("relative", {
+          "w-[200px] h-[200px]": size === "medium",
+          "w-[140px] h-[140px]": size === "small",
+          "w-[140px] h-[120px]": size === "smaller",
+        })}
+      >
         {image}
       </figure>
     );
@@ -31,12 +39,20 @@ function Gif({
   return (
     <Link href={link.route}>
       <a className="relative flex items-center">
-        <figure className={`relative w-[${size}px] h-[${size}px]`}>
+        <figure
+          className={classNames("relative", {
+            "w-[200px] h-[200px]": size === "medium",
+            "w-[140px] h-[140px]": size === "small",
+            "w-[120px] h-[120px]": size === "smaller",
+          })}
+        >
           {image}
         </figure>
 
-        <div className="absolute top-1/2 -translate-y-1/2 p-2 bg-black text-white text-center w-full">
-          {link.label}
+        <div className="absolute top-1/2 -translate-y-1/2 w-full">
+          <BorderBox>
+            <div className="bg-black text-white text-center">{link.label}</div>
+          </BorderBox>
         </div>
       </a>
     </Link>
@@ -52,11 +68,11 @@ const Home: NextPage = () => {
       />
 
       <div className="flex flex-col justify-center items-center h-screen">
-        <div className="absolute left-0 top-0 w-full h-full">
+        <div className="hidden lg:block absolute left-0 top-0 w-full h-full">
           <div className="grid place-items-center h-full">
-            <div className="hidden lg:block w-[1024px] bg-opacity-40">
-              <div className="hidden grid-rows-3 grid-cols-5">
-                <div className="row-start-3 col-start-2 relative -translate-x-1/3 translate-y-1/4 rotate-12">
+            <div className="lg:block w-[1024px] bg-opacity-40">
+              <div className="grid grid-rows-3 grid-cols-5">
+                <div className="row-start-2 col-start-1 relative translate-y-1/4 rotate-12">
                   <Gif
                     image={
                       <Image
@@ -66,11 +82,11 @@ const Home: NextPage = () => {
                         alt="Decorative playboy gif"
                       />
                     }
-                    size={120}
+                    size="small"
                   ></Gif>
                 </div>
 
-                <div className="row-start-3 col-start-3">
+                <div className="row-start-3 col-start-4 translate-y-2 -translate-x-6">
                   <Gif
                     image={
                       <Image
@@ -84,7 +100,7 @@ const Home: NextPage = () => {
                   ></Gif>
                 </div>
 
-                <div className="row-start-1 col-start-5">
+                <div className="row-start-2 col-start-5">
                   <Gif
                     image={
                       <Image
@@ -94,10 +110,11 @@ const Home: NextPage = () => {
                         alt="Decorative butterfly gif"
                       />
                     }
+                    size="small"
                   ></Gif>
                 </div>
 
-                <div className="row-start-2 col-start-1">
+                <div className="row-start-3 col-start-2">
                   <Gif
                     image={
                       <Image
@@ -111,7 +128,7 @@ const Home: NextPage = () => {
                   ></Gif>
                 </div>
 
-                <div className="grid place-items-center row-start-2 col-start-5">
+                <div className="grid place-items-center row-start-1 col-start-4 -translate-y-4">
                   <Gif
                     image={
                       <Image
@@ -121,7 +138,7 @@ const Home: NextPage = () => {
                         alt="Decorative dollar gif"
                       />
                     }
-                    size={140}
+                    size="smaller"
                     link={{ label: "Shop", route: "/shop" }}
                   />
                 </div>
@@ -129,6 +146,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
+
         <div className="-translate-y-8 px-5">
           <Image src={Logo.src} width={397} height={100} alt="toniagost logo" />
         </div>

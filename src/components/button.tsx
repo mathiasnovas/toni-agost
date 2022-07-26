@@ -2,7 +2,7 @@ import classNames from "classnames";
 import Link from "next/link";
 
 type BaseProps = {
-  variant?: "primary" | "secondary" | "default";
+  variant?: "primary" | "secondary" | "default" | "dark";
   href?: string;
   target?: string;
   width?: "auto" | "fixed" | "full";
@@ -60,11 +60,13 @@ export const Button = ({
           "bg-primary text-white": variant === "primary",
           "bg-primary-300": variant === "default",
           "bg-secondary": variant === "secondary",
+          "bg-black text-white": variant === "dark",
           "lg:min-w-[200px]": width === "fixed",
           "min-w-none w-full": width === "full",
           "border-l-gray-900 border-t-gray-900 border-r-gray-50 border-b-gray-50":
             active,
-        }
+        },
+        className
       )}
     >
       <LinkWrapper href={href} target={target}>

@@ -16,6 +16,10 @@ export function Window({
   const windowOffset = 150;
   const windowRef = useRef<HTMLDivElement>(null);
 
+  // Set max height for window manually based on the window size.
+  // We have to do this for mobile devices as iOS, for example, has
+  // a menu bar at the bottom of the screen which "eats" part of the
+  // available window height.
   useEffect(() => {
     function handleResize() {
       if (window != undefined) {
