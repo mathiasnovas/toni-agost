@@ -230,8 +230,110 @@ const Booking: NextPage = () => {
 
           {currentTab === "tos" ? (
             <div>
-              Wow!!! such a cool and easy-to-understand text about terms and
-              conditions!
+              <h3 className="text-xl">
+                Terms and conditions &amp; Cancellation Policy
+              </h3>
+              <ul className="flex flex-col gap-2 mt-2">
+                <li>
+                  A minimum 50€ deposit is required in advance to book a tattoo
+                  appointment, you will have to send it 24hs after you recieve
+                  my email confirmation about your booking request. A deposit is
+                  required for each appointment. The deposit is payable via Bank
+                  Transfer or Paypal. The deposit is refundable, check
+                  Cancellation Policy.
+                </li>
+
+                <li>
+                  Once a deposit has been received, your appointment is
+                  confirmed.Please book your tattoo appointment on a day where
+                  you have no set plans after your appointment. Give yourself
+                  plenty of time and do not rush the artist.
+                </li>
+
+                <li>
+                  Please do not come to your tattoo appointment if you are
+                  feeling unwell. Just give us as much notice as you can, at
+                  least 2 hours before your appointment. Bear in mind that you
+                  may still be contagious even if you feel you&apos;ve recovered
+                  from symptoms. If you&apos;ve been suffering from a cold, flu,
+                  a cough, temperature, or a sickness bug for example and have
+                  started to feel better, please don&apos;t come in.
+                </li>
+
+                <li>
+                  If you are more than 20 mins late for your appointment, please
+                  let me know and we can reschedule your appointment. I
+                  won&apos;t have enough time to tattoo you if you are this
+                  late. I reserve the right not to tattoo you if you arrive
+                  leaving insufficient time for me to complete the tattoo.{" "}
+                </li>
+
+                <li>
+                  Custom drawings/tattoo designs are not available until the day
+                  of your appointment. There is always time on the day to
+                  discuss your design and ask for small changes.
+                </li>
+
+                <li>
+                  Avoid drinking alcohol, and energy drinks such as Red Bull 24
+                  hours prior to your appointment. Make sure you have eaten
+                  properly prior to your appointment and bring snacks or food
+                  with you.
+                </li>
+
+                <li>
+                  If you are under the influence of alcohol or drugs, I cannot
+                  tattoo you. You will be asked to leave and your deposit will
+                  not be refunded.
+                </li>
+
+                <li>
+                  On the day of your appointment, a consent form will be
+                  provided for you to fill out. You&apos;ll be expected to
+                  disclose information about health conditions and medications.
+                </li>
+
+                <li>
+                  I cannot tattoo you if you are pregnant or if you are
+                  breastfeeding.
+                </li>
+
+                <li>I do not undertake offensive / racist tattoos.</li>
+
+                <li>
+                  It is your responsibility to care for your new tattoo and
+                  follow the artist&apos;s aftercare advice. I will provide you
+                  with aftercare instructions after our appointment.
+                </li>
+              </ul>
+              <h3 className="mt-6 text-xl">Cancellation Policy</h3>
+              <p className="mt-2">
+                A minimum 50€ deposit is required in advance to book a tattoo
+                appointment, you will have to send it 24hs after you receive my
+                email confirmation about your booking request. A deposit is
+                required for each appointment. The deposit is payable via Bank
+                Transfer or Paypal.
+              </p>
+
+              <p className="mt-2">
+                The deposit is refundable in case of cancellation prior the 7
+                days before the appointment. If you would like to rearrange your
+                appointment I ask for a minimum of 7 days notice. Failing to
+                notify me within the minimum 7 days notice will result in losing
+                your deposit.
+              </p>
+
+              <p className="mt-2">
+                If you cancel because you are ill or recovering from illness,
+                you will have 30 days in which you can reschedule your
+                appointment. Your deposit will be carried over to the new
+                appointment. If you are ill a second time and give less than 7
+                days notice prior to your second appointment, the deposit will
+                then become non-refundable.If for any reason (illness, etc) I
+                need to cancel our appointment last minute, the option of a
+                deposit refund is possible. You can also choose to reschedule
+                your appointment.
+              </p>
             </div>
           ) : null}
         </Window>

@@ -84,7 +84,7 @@ const MinesweeperPage: NextPage = () => {
                     <p>
                       <span className="text-secondary">unknown visitor</span>{" "}
                       receives <span className="text-primary">coupon code</span>
-                      . It reads <span>TONI-JULY-10</span>.
+                      . It reads: <span>TONI-FIRST-10</span>.
                     </p>
                   </div>
                 </BorderBox>
