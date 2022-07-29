@@ -110,6 +110,20 @@ const Booking: NextPage = () => {
                 the placement of the tattoo and wear something that makes it
                 easy to reach that area.
               </p>
+              <h3 className="text-xl mt-6">Booking a guest spot</h3>
+              <p className="mt-4">
+                Since there is usually very limited slots available for guest
+                spots I usually will open a waitlist first that will give you
+                booking priority. If you want to be a part of a waitlist you can
+                contact me and then I will contact you before bookings open to
+                give you an appointment.
+              </p>
+              <p className="mt-4">
+                Once bookings open anyone can book via DM. A deposit of 50% of
+                the total price is necessary to be paid 24hs after making the
+                appointment. You can pay via PayPal. The rest of the price will
+                be paid at the appointment via PayPal or Cash.
+              </p>
             </div>
           ) : null}
 
@@ -197,8 +211,9 @@ const Booking: NextPage = () => {
               {currentBookingType === "booking-guest-spot" ? (
                 <div className="mt-4">
                   <p>
-                    @to-do: A somewhat condensed text with information regarding
-                    booking a guest spot. For more information, please check the{" "}
+                    Book a guest spot now or contact me if you have any
+                    questions regarding the process. For more information,
+                    please check the{" "}
                     <button
                       className="text-primary underline cursor-pointer"
                       onClick={() => setCurrentTab("info")}
@@ -223,6 +238,17 @@ const Booking: NextPage = () => {
                       Contact me
                     </Button>
                   </div>
+                  <p className="mt-2 text-sm">
+                    By following the booking link above and completing the
+                    booking form, you accept the{" "}
+                    <button
+                      className="text-primary underline cursor-pointer"
+                      onClick={() => setCurrentTab("tos")}
+                    >
+                      terms and conditions
+                    </button>
+                    .
+                  </p>
                 </div>
               ) : null}
             </div>
