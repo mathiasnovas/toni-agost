@@ -6,6 +6,8 @@ import { SEO } from "../components/seo";
 
 import Spiral from "../../public/images/spiral.gif";
 import Email from "../../public/images/twirlemail.gif";
+import Instagram from "../../public/images/instagram.webp";
+import TikTok from "../../public/images/tiktok.png";
 
 const Contact: NextPage = () => {
   return (
@@ -27,29 +29,51 @@ const Contact: NextPage = () => {
         >
           <div>
             <p>
-              @to-do: A short text about how to contact me and what to expect
-              when doing so.
+              Feel free to drop me a message on instagram or e-mail me if you
+              have any questions. I normally reply within 2-3 business days .
             </p>
-
-            <h3 className="mt-6 text-xl">Social media</h3>
-            <a
-              className="text-primary underline"
-              href="https://www.instagram.com/toniagost/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Instagram
-            </a>
-
             <h3 className="mt-6 text-xl">Contact</h3>
-            <a className="mt-2" href="mailto:hello@toniagost.art">
-              <Image
-                src={Email.src}
-                width={50}
-                height={66}
-                alt="Spinning e-mail gif"
-              />
-            </a>
+            <div className="flex gap-4">
+              <a
+                className="mt-2"
+                href="mailto:hello@toniagost.art"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image
+                  src={Email.src}
+                  width={50}
+                  height={66}
+                  alt="Spinning e-mail gif"
+                />
+              </a>
+              <a
+                className="mt-2"
+                href="https://www.instagram.com/toniagost/?hl=en"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image
+                  src={Instagram.src}
+                  width={66}
+                  height={66}
+                  alt="Spinning e-mail gif"
+                />
+              </a>
+              <a
+                className="mt-2"
+                href="https://www.tiktok.com/@toniagost"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image
+                  src={TikTok.src}
+                  width={66}
+                  height={66}
+                  alt="Spinning e-mail gif"
+                />
+              </a>
+            </div>
           </div>
         </Window>
       </div>

@@ -71,8 +71,8 @@ const Home: NextPage = () => {
         <div className="hidden lg:block absolute left-0 top-0 w-full h-full">
           <div className="grid place-items-center h-full">
             <div className="lg:block w-[1024px] bg-opacity-40">
-              <div className="grid grid-rows-3 grid-cols-5">
-                <div className="row-start-2 col-start-1 relative translate-x-4 translate-y-1/4 rotate-12">
+              <div className="overflow-hidden grid grid-rows-3 grid-cols-5">
+                <div className="row-start-2 col-start-1 relative translate-x-4 -translate-y-1/4 rotate-12">
                   <Gif
                     image={
                       <Image
@@ -114,7 +114,7 @@ const Home: NextPage = () => {
                   ></Gif>
                 </div>
 
-                <div className="row-start-3 col-start-2">
+                <div className="row-start-3 col-start-2 -translate-x-1/4">
                   <Gif
                     image={
                       <Image
@@ -128,7 +128,7 @@ const Home: NextPage = () => {
                   ></Gif>
                 </div>
 
-                <div className="grid place-items-center row-start-1 col-start-4 translate-x-4 -translate-y-6">
+                <div className="grid place-items-center row-start-1 col-start-3 translate-x-4 -translate-y-6">
                   <Gif
                     image={
                       <Image
