@@ -76,16 +76,11 @@ const MinesweeperPage: NextPage = () => {
                 <BorderBox>
                   <div className="grid place-items-center bg-white p-2">
                     <p>
-                      Wowsers! You did it! Here, have a{" "}
-                      <span className="text-primary">coupon code</span> for 10%
-                      off your first tattoo with Toni.
+                      Wowsers! You did it! Use the following coupon code when
+                      booking to get a 10% discount off your first tattoo!
                     </p>
 
-                    <p>
-                      <span className="text-secondary">unknown visitor</span>{" "}
-                      receives <span className="text-primary">coupon code</span>
-                      . It reads: <span>TONI-FIRST-10</span>.
-                    </p>
+                    <p className="text-primary">TONI-FIRST-10</p>
                   </div>
                 </BorderBox>
               </div>

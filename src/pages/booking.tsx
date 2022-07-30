@@ -119,10 +119,11 @@ const Booking: NextPage = () => {
                 give you an appointment.
               </p>
               <p className="mt-4">
-                Once bookings open anyone can book via DM. A deposit of 50% of
-                the total price is necessary to be paid 24hs after making the
-                appointment. You can pay via PayPal. The rest of the price will
-                be paid at the appointment via PayPal or Cash.
+                Once bookings open anyone can book (make book a link to the
+                guest spot form)A deposit of 50% of the total price is necessary
+                to be paid 24hs after making the appointment. You can pay via
+                PayPal. The rest of the price will be paid at the appointment
+                via PayPal or Cash.
               </p>
             </div>
           ) : null}

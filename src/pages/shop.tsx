@@ -4,7 +4,7 @@ import { Window } from "../components/window";
 
 const Shop: NextPage = () => {
   return (
-    <div className="w-full h-full grid place-items-center">
+    <div className="flex flex-col items-center md:mt-[5vh] lg:mt-[15vh] p-2">
       <Window title="Shop" actions="Let's do some shopping">
         <div>Nothing here yet... </div>
       </Window>
