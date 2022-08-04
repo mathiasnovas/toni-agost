@@ -10,7 +10,8 @@ import ShopBannerPortrait from "../../public/images/shop_banner_phone.jpg";
 const Shop: NextPage = () => {
   return (
     <div className="flex flex-col items-center md:mt-[5vh] lg:mt-[15vh] p-2">
-      <BorderBox>
+      <Window title="Let's do some shopping">Coming soon...</Window>
+      <BorderBox className="hidden">
         <a href="https://toniagost.shop" target="_blank" rel="noreferrer">
           <figure className="relative hidden md:block">
             <Image
