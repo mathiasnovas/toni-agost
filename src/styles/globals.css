@@ -5,3 +5,7 @@
 body {
   @apply overflow-hidden h-full;
 }
+
+figure > span {
+  @apply block !important;
+}
