@@ -59,7 +59,7 @@ const MinesweeperPage: NextPage = () => {
             />
 
             {gameState === "lost" ? (
-              <div className="absolute top-0 left-0 w-full h-full grid place-items-center bg-black bg-opacity-30">
+              <div className="absolute top-0 left-0 w-full h-full grid place-items-center bg-black bg-opacity-30 z-20">
                 <BorderBox>
                   <div className="grid place-items-center bg-white p-2">
                     Oooops! Looks like you lost...
@@ -72,7 +72,7 @@ const MinesweeperPage: NextPage = () => {
             ) : null}
 
             {gameState === "won" ? (
-              <div className="absolute top-0 left-0 w-full h-full grid place-items-center bg-black bg-opacity-30">
+              <div className="absolute top-0 left-0 w-full h-full grid place-items-center bg-black bg-opacity-30 z-20">
                 <BorderBox>
                   <div className="grid place-items-center bg-white p-2">
                     <p>
