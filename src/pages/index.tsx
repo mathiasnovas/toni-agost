@@ -38,7 +38,10 @@ function Gif({
 
   return (
     <Link href={link.route}>
-      <a className="relative flex items-center">
+      <a
+        className="relative flex items-center"
+        target={link.route.includes("https") ? "_blank" : "_self"}
+      >
         <figure
           className={classNames("relative", {
             "w-[200px] h-[200px]": size === "medium",
@@ -139,7 +142,7 @@ const Home: NextPage = () => {
                       />
                     }
                     size="smaller"
-                    link={{ label: "Shop", route: "/shop" }}
+                    link={{ label: "Shop", route: "https://toniagost.shop/" }}
                   />
                 </div>
               </div>

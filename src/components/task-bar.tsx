@@ -35,7 +35,7 @@ export const TaskBar = () => {
     },
     {
       label: "Shop",
-      route: "/shop",
+      route: "https://toniagost.shop/",
       icon: Shop.src,
     },
     {
@@ -111,6 +111,7 @@ export const TaskBar = () => {
               <Button
                 key={i}
                 href={item.route}
+                target={item.route.includes("https") ? "_blank" : "_self"}
                 width="fixed"
                 iconLeft={
                   <Image
