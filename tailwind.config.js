@@ -20,7 +20,7 @@ module.exports = {
         },
       },
       backgroundImage: {
-        "desktop-picture": "url('/images/bg2.png')",
+        "desktop-picture": "url('/images/bg2.webp')",
       },
     },
   },
