@@ -36,7 +36,7 @@ const Contact: NextPage = () => {
             <div className="flex gap-4">
               <a
                 className="mt-2"
-                href="mailto:hello@toniagost.art"
+                href="mailto:toniagostph@gmail.com"
                 target="_blank"
                 rel="noreferrer"
               >

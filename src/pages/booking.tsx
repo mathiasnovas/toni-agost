@@ -8,6 +8,12 @@ import { SEO } from "../components/seo";
 import Heart from "../../public/images/heart.gif";
 import { useState } from "react";
 import classNames from "classnames";
+import {
+  CUSTOM_PRICE,
+  DEFAULT_PRICE_RANGE,
+  DEPOSIT_AMOUT,
+} from "../helpers/data";
+import Link from "next/link";
 
 const Booking: NextPage = () => {
   const [currentTab, setCurrentTab] = useState<string>("booking-form");
@@ -79,51 +85,57 @@ const Booking: NextPage = () => {
                 I evaluate your request and get back to you on the next days
                 with further instructions on how to send the deposit, the exact
                 price for the desired design, and the studio location. You will
-                pay a 50€ deposit via PayPal or bank transfer. If you don&apos;t
-                send the deposit in the next 24 hours after my response, you
-                will loose your spot (if you transferred the deposit via bank
-                transfer please let me know and send me a transfer confirmation
-                via email). Please let me know if you decide to cancel the
-                appointment and not pay the deposit. If you booked a Custom
-                Design the artist will draw a new design based on your reference
-                image, you can discuss with the artist if you would like to add
-                any changes during your appointment.
+                pay a {DEPOSIT_AMOUT}€ deposit via PayPal or bank transfer. If
+                you don&apos;t send the deposit in the next 24 hours after my
+                response, you will loose your spot (if you transferred the
+                deposit via bank transfer please let me know and send me a
+                transfer confirmation via email). Please let me know if you
+                decide to cancel the appointment and not pay the deposit. If you
+                booked a Custom Design the artist will draw a new design based
+                on your reference image, you can discuss with the artist if you
+                would like to add any changes during your appointment.
               </p>
               <h3 className="text-xl mt-6">Pricing</h3>
               <p className="mt-2">
-                The pricing scale for available designs is 150€-350€ And for
-                custom designs 180€-500€. You will have to pay a 50€ deposit to
-                reserve your slot, no deposit no appointment. The deposit will
-                be discounted from the total price. If money is an issue we can
-                always discuss your budget! If you are planning to get multiple
-                designs in one session there will be discounts. Please
-                don&apos;t book if you are not ready to pay the deposit. I ONLY
-                work with my own handwriting (cursive or capital letters) and
-                Blackletter/Gothic , I do not do other typographies. I
-                don&apos;t tattoo ribs (under boob is ok depending the design).
-                FLASH PREFERRED.
+                The pricing scale for available designs is{" "}
+                {`${DEFAULT_PRICE_RANGE[0]}€-${DEFAULT_PRICE_RANGE[1]}€`}.
+                Custom designs start at {CUSTOM_PRICE}€. You will have to pay a{" "}
+                {DEPOSIT_AMOUT}€ deposit to reserve your slot. No deposit, no
+                appointment. The deposit will be discounted from the total
+                price. If money is an issue we can always discuss your budget!
+                If you are planning to get multiple designs in one session there
+                will be discounts. Please don&apos;t book if you are not ready
+                to pay the deposit. I ONLY work with my own handwriting (cursive
+                or capital letters) and Blackletter/Gothic. I do not do other
+                typographies. I don&apos;t tattoo ribs (under boob is ok
+                depending the design). FLASH PREFERRED.
               </p>
               <h3 className="text-xl mt-6">Before the appointment</h3>
               <p className="mt-2">
                 Make sure to eat and drink water. Bring some more water and
-                sweet snacks with you ! Comfy clothes are a must ♥️ Think about
+                sweet snacks with you! Comfy clothes are a must ♥️ Think about
                 the placement of the tattoo and wear something that makes it
                 easy to reach that area.
               </p>
               <h3 className="text-xl mt-6">Booking a guest spot</h3>
               <p className="mt-4">
                 Since there is usually very limited slots available for guest
-                spots I usually will open a waitlist first that will give you
+                spots, I will usually open a waitlist first that will give you
                 booking priority. If you want to be a part of a waitlist you can
                 contact me and then I will contact you before bookings open to
                 give you an appointment.
               </p>
               <p className="mt-4">
-                Once bookings open anyone can book (make book a link to the
-                guest spot form)A deposit of 50% of the total price is necessary
-                to be paid 24hs after making the appointment. You can pay via
-                PayPal. The rest of the price will be paid at the appointment
-                via PayPal or Cash.
+                Once bookings open anyone can book through the{" "}
+                <Link href="https://form.jotform.com/toniagostph/guest-spot-request">
+                  <a className="text-primary underline" target="_blank">
+                    booking form
+                  </a>
+                </Link>
+                . A deposit of 50% of the total price is necessary to be paid
+                24hs after making the appointment. You can pay via PayPal. The
+                rest of the price will be paid at the appointment via PayPal or
+                Cash.
               </p>
             </div>
           ) : null}
@@ -262,12 +274,12 @@ const Booking: NextPage = () => {
               </h3>
               <ul className="flex flex-col gap-2 mt-2">
                 <li>
-                  A minimum 50€ deposit is required in advance to book a tattoo
-                  appointment, you will have to send it 24hs after you recieve
-                  my email confirmation about your booking request. A deposit is
-                  required for each appointment. The deposit is payable via Bank
-                  Transfer or Paypal. The deposit is refundable, check
-                  Cancellation Policy.
+                  A minimum {DEPOSIT_AMOUT}€ deposit is required in advance to
+                  book a tattoo appointment, you will have to send it 24hs after
+                  you recieve my email confirmation about your booking request.
+                  A deposit is required for each appointment. The deposit is
+                  payable via Bank Transfer or Paypal. The deposit is
+                  refundable, check Cancellation Policy.
                 </li>
 
                 <li>
@@ -335,11 +347,11 @@ const Booking: NextPage = () => {
               </ul>
               <h3 className="mt-6 text-xl">Cancellation Policy</h3>
               <p className="mt-2">
-                A minimum 50€ deposit is required in advance to book a tattoo
-                appointment, you will have to send it 24hs after you receive my
-                email confirmation about your booking request. A deposit is
-                required for each appointment. The deposit is payable via Bank
-                Transfer or Paypal.
+                A minimum {DEPOSIT_AMOUT}€ deposit is required in advance to
+                book a tattoo appointment, you will have to send it 24hs after
+                you receive my email confirmation about your booking request. A
+                deposit is required for each appointment. The deposit is payable
+                via Bank Transfer or Paypal.
               </p>
 
               <p className="mt-2">
