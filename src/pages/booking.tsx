@@ -127,7 +127,7 @@ const Booking: NextPage = () => {
               </p>
               <p className="mt-4">
                 Once bookings open anyone can book through the{" "}
-                <Link href="https://form.jotform.com/toniagostph/guest-spot-request">
+                <Link href="https://form.jotform.com/toniagostph/waitlist">
                   <a className="text-primary underline" target="_blank">
                     booking form
                   </a>
@@ -173,7 +173,7 @@ const Booking: NextPage = () => {
                     onChange={() => setCurrentBookingType("booking-guest-spot")}
                     checked={currentBookingType === "booking-guest-spot"}
                   />
-                  <span className="ml-2">Booking Guest Spot</span>
+                  <span className="ml-2">Guest Spot Waitlist</span>
                 </label>
               </div>
 
@@ -238,11 +238,11 @@ const Booking: NextPage = () => {
 
                   <div className="flex flex-col sm:flex-row items-center sm:gap-2 mt-4">
                     <Button
-                      href="https://form.jotform.com/toniagostph/guest-spot-request"
+                      href="https://form.jotform.com/toniagostph/waitlist"
                       target="_blank"
                       variant="primary"
                     >
-                      Book guest spot now
+                      Guest Spot Waitlist
                     </Button>
 
                     <span className="text-sm">- or -</span>
