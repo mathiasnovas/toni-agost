@@ -36,7 +36,7 @@ const Contact: NextPage = () => {
             <div className="flex gap-4">
               <a
                 className="mt-2"
-                href="mailto:toniagostph@gmail.com"
+                href="mailto:hello@toniagost.com"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -73,6 +73,44 @@ const Contact: NextPage = () => {
                   alt="Spinning e-mail gif"
                 />
               </a>
+            </div>
+
+            <hr className="my-4" />
+
+            <div>
+              <div>
+                <div className="font-bold">General inquiries</div>
+                <div>
+                  <a
+                    href="mailto:hello@toniagost.com"
+                    className="text-primary underline"
+                  >
+                    hello@toniagost.com
+                  </a>
+                </div>
+              </div>
+              <div className="mt-2">
+                <div className="font-bold">Booking info</div>
+                <div>
+                  <a
+                    href="mailto:bookings@toniagost.com"
+                    className="text-primary underline"
+                  >
+                    bookings@toniagost.com
+                  </a>
+                </div>
+              </div>
+              <div className="mt-2">
+                <div className="font-bold">Collaborations/PR</div>
+                <div>
+                  <a
+                    href="mailto:pr@toniagost.com"
+                    className="text-primary underline"
+                  >
+                    pr@toniagost.com
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </Window>
