@@ -57,7 +57,7 @@ export const Button = ({
       className={classNames(
         "border border-t-gray-50 border-l-gray-50 border-r-gray-900 border-b-gray-900 lg:hover:border-l-gray-900 lg:hover:border-t-gray-900 lg:hover:border-r-gray-50 lg:hover:border-b-gray-50",
         {
-          "bg-primary text-white": variant === "primary",
+          "bg-primary text-black": variant === "primary",
           "bg-primary-300": variant === "default",
           "bg-secondary": variant === "secondary",
           "bg-black text-white": variant === "dark",

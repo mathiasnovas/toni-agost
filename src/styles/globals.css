@@ -9,3 +9,10 @@ body {
 figure > span {
   @apply block !important;
 }
+
+.custom-bg {
+  background-color: #ebfaff;
+  opacity: 0.8;
+  background-image: radial-gradient(#1e8dff 0.5px, #ebfaff 0.5px);
+  background-size: 10px 10px;
+}

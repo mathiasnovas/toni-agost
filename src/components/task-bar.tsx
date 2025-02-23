@@ -92,6 +92,7 @@ export const TaskBar = () => {
             onClick={() => {
               router.push("/");
             }}
+            variant="primary"
             iconLeft={
               <>
                 <Image
@@ -113,6 +114,7 @@ export const TaskBar = () => {
                 href={item.route}
                 target={item.route.includes("https") ? "_blank" : "_self"}
                 width="fixed"
+                variant="primary"
                 iconLeft={
                   <Image
                     src={item.icon ?? ""}

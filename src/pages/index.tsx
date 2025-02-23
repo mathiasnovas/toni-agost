@@ -11,7 +11,16 @@ import Playboy from "../../public/images/playboy.gif";
 import Cowgirl from "../../public/images/cowgirl.gif";
 import Butteryfly from "../../public/images/butterfly.gif";
 import Dollar from "../../public/images/shop.gif";
+import Dolphin from "../../public/images/2025/rainbowdolphin.gif";
+import CuteThing from "../../public/images/2025/B21.gif";
+import Contact from "../../public/images/2025/email10.gif";
 import classNames from "classnames";
+import Chick from "../../public/images/2025/chick.gif";
+import Monkeys from "../../public/images/2025/monkeys.gif";
+import GK019 from "../../public/images/2025/GK019.gif";
+import Heart from "../../public/images/2025/heart.gif";
+import Welcome from "../../public/images/2025/welcome.gif";
+import { Window } from "../components/window";
 
 function Gif({
   image,
@@ -19,7 +28,7 @@ function Gif({
   link,
 }: {
   image: React.ReactNode;
-  size?: "medium" | "small" | "smaller";
+  size?: "medium" | "small" | "smaller" | "tiny";
   link?: { label: string; route: string };
 }) {
   if (!link) {
@@ -29,6 +38,7 @@ function Gif({
           "w-[200px] h-[200px]": size === "medium",
           "w-[140px] h-[140px]": size === "small",
           "w-[140px] h-[120px]": size === "smaller",
+          "w-[100px] h-[100px]": size === "tiny",
         })}
       >
         {image}
@@ -47,6 +57,7 @@ function Gif({
             "w-[200px] h-[200px]": size === "medium",
             "w-[140px] h-[140px]": size === "small",
             "w-[120px] h-[120px]": size === "smaller",
+            "w-[100px] h-[100px]": size === "tiny",
           })}
         >
           {image}
@@ -79,13 +90,13 @@ const Home: NextPage = () => {
                   <Gif
                     image={
                       <Image
-                        src={Playboy.src}
+                        src={CuteThing.src}
                         layout="fill"
                         objectFit="contain"
                         alt="Decorative playboy gif"
                       />
                     }
-                    size="small"
+                    size="smaller"
                   ></Gif>
                 </div>
 
@@ -103,17 +114,17 @@ const Home: NextPage = () => {
                   ></Gif>
                 </div>
 
-                <div className="row-start-2 col-start-5 translate-x-4">
+                <div className="row-start-2 col-start-5 translate-x-4 -translate-y-12 rotate-[20deg]">
                   <Gif
                     image={
                       <Image
-                        src={Butteryfly.src}
+                        src={Dolphin.src}
                         layout="fill"
                         objectFit="contain"
-                        alt="Decorative butterfly gif"
+                        alt="Decorative dolphin gif"
                       />
                     }
-                    size="small"
+                    // size="small"
                   ></Gif>
                 </div>
 
@@ -121,10 +132,11 @@ const Home: NextPage = () => {
                   <Gif
                     image={
                       <Image
-                        src={Cowgirl.src}
+                        src={Contact.src}
                         layout="fill"
                         objectFit="contain"
-                        alt="Decorative cowgirl gif"
+                        alt="Decorative contact gif"
+                        className="-rotate-[20deg]"
                       />
                     }
                     link={{ label: "Contact", route: "/contact" }}
@@ -148,6 +160,78 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
+
+          <div className="absolute bottom-12 left-12">
+            <Gif
+              image={
+                <Image
+                  src={Chick.src}
+                  layout="fill"
+                  objectFit="contain"
+                  alt="Chick"
+                />
+              }
+              size="smaller"
+            />
+          </div>
+
+          <div className="absolute bottom-4 right-10">
+            <Gif
+              image={
+                <Image
+                  src={Monkeys.src}
+                  layout="fill"
+                  objectFit="contain"
+                  alt="Chick"
+                />
+              }
+              size="smaller"
+            />
+          </div>
+
+          <div className="absolute top-12 right-12">
+            <Gif
+              image={
+                <Image
+                  src={GK019.src}
+                  layout="fill"
+                  objectFit="contain"
+                  alt="Chick"
+                />
+              }
+              size="tiny"
+            />
+          </div>
+
+          <div className="absolute top-12 left-20 -rotate-6">
+            <Gif
+              image={
+                <Image
+                  src={Welcome.src}
+                  layout="fill"
+                  objectFit="contain"
+                  alt="Welcome"
+                />
+              }
+              size="tiny"
+            />
+          </div>
+
+          <Window
+            title="Welcome"
+            icon={
+              <Image
+                src={Logo.src}
+                width={397}
+                height={100}
+                alt="toniagost logo"
+              />
+            }
+          >
+            <div className="bg-black text-white text-center">
+              <div></div>
+            </div>
+          </Window>
         </div>
 
         <div className="-translate-y-8 px-5">

@@ -10,7 +10,7 @@ export const Block = ({
   return (
     <div
       className={classNames(
-        "p-2 bg-primary-300 border border-t-gray-50 border-l-gray-50 border-r-gray-900 border-b-gray-900",
+        "p-2 bg-primary border border-t-gray-50 border-l-gray-50 border-r-gray-900 border-b-gray-900",
         className
       )}
     >
