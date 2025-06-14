@@ -12,7 +12,7 @@ const Shop: NextPage = () => {
     <div className="flex flex-col items-center md:mt-[5vh] lg:mt-[15vh] p-2">
       <Window title="Let's do some shopping">Coming soon...</Window>
       <BorderBox className="hidden">
-        <a href="https://toniagost.shop" target="_blank" rel="noreferrer">
+        <a href="https://bytoni.shop/" target="_blank" rel="noreferrer">
           <figure className="relative hidden md:block">
             <Image
               src={ShopBanner.src}

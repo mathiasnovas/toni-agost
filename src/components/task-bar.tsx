@@ -35,7 +35,7 @@ export const TaskBar = () => {
     },
     {
       label: "Shop",
-      route: "https://toniagost.shop/",
+      route: "https://bytoni.shop/",
       icon: Shop.src,
     },
     {

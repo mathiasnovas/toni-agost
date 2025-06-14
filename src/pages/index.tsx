@@ -154,7 +154,7 @@ const Home: NextPage = () => {
                       />
                     }
                     size="smaller"
-                    link={{ label: "Shop", route: "https://toniagost.shop/" }}
+                    link={{ label: "Shop", route: "https://bytoni.shop/" }}
                   />
                 </div>
               </div>
